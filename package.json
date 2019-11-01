@@ -1,0 +1,59 @@
+{
+  "name": "react-design-system",
+  "version": "1.0.0",
+  "description": "Design System Boilerplate",
+  "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allanferreira/react-design-system"
+  },
+  "scripts": {
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "eslint src/**/*.js",
+    "test:unit": "jest",
+    "build": "npm run test && webpack --mode production",
+    "build:major": "npm run test && build && npm version major",
+    "build:minor": "npm run test && build && npm version minor",
+    "build:patch": "npm run test && build && npm version patch"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ]
+  },
+  "keywords": [
+    "react",
+    "components",
+    "design",
+    "ui"
+  ],
+  "author": "Allan Ferreira",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "@types/jest": "^24.0.21",
+    "babel-loader": "^8.0.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "prop-types": "latest",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^4.4.1"
+  }
+}
